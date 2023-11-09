@@ -10,14 +10,28 @@
         B4  G1 G2   R5 Y3 Y6-->
     <table>
       <tr>
-        <td> </td>
-        <td>Y1</td>
-        <td>LB</td>
-        <td>LG</td>
-        <td>LW</td>
-        <td>LY</td>
-        <td>LR</td>
-        <td>Y4</td>
+        <td></td>
+        <td>
+          <key-select button="Y1" position="top" />
+        </td>
+        <td>
+          <key-select button="LB" position="top" />
+        </td>
+        <td>
+          <key-select button="LG" position="top" />
+        </td>
+        <td>
+          <key-select button="LW" position="top" />
+        </td>
+        <td>
+          <key-select button="LY" position="top" />
+        </td>
+        <td>
+          <key-select button="LR" position="top" />
+        </td>
+        <td>
+          <key-select button="Y4" position="top" />
+        </td>
         <td> </td>
       </tr>
       <tr>
@@ -32,7 +46,9 @@
         <td> </td>
       </tr>
       <tr>
-        <td>B1</td>
+        <td>
+          <key-select button="B1" position="top" />
+        </td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -40,10 +56,14 @@
         <td> </td>
         <td> </td>
         <td> </td>
-        <td>Y5</td>
+        <td>
+          <key-select button="Y5" position="top" />
+        </td>
       </tr>
       <tr>
-        <td>Y2</td>
+        <td>
+          <key-select button="Y2" position="top" />
+        </td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -51,10 +71,14 @@
         <td> </td>
         <td> </td>
         <td> </td>
-        <td>R6</td>
+        <td>
+          <key-select button="R6" position="top" />
+        </td>
       </tr>
       <tr>
-        <td>B2</td>
+        <td>
+          <key-select button="B2" position="top" />
+        </td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -62,10 +86,14 @@
         <td> </td>
         <td> </td>
         <td> </td>
-        <td>W1</td>
+        <td>
+          <key-select button="W1" position="top" />
+        </td>
       </tr>
       <tr>
-        <td>R1</td>
+        <td>
+          <key-select button="R1" position="top" />
+        </td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -73,10 +101,14 @@
         <td> </td>
         <td> </td>
         <td> </td>
-        <td>B6</td>
+        <td>
+          <key-select button="B6" position="top" />
+        </td>
       </tr>
       <tr>
-        <td>B3</td>
+        <td>
+          <key-select button="B3" position="bottom" />
+        </td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -84,10 +116,14 @@
         <td> </td>
         <td> </td>
         <td> </td>
-        <td>G3</td>
+        <td>
+          <key-select button="G3" position="bottom" />
+        </td>
       </tr>
       <tr>
-        <td>B4</td>
+        <td>
+          <key-select button="B4" position="bottom" />
+        </td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -95,10 +131,14 @@
         <td> </td>
         <td> </td>
         <td> </td>
-        <td>Y6</td>
+        <td>
+          <key-select button="Y6" position="bottom" />
+        </td>
       </tr>
       <tr>
-        <td>G1</td>
+        <td>
+          <key-select button="G1" position="bottom" />
+        </td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -106,28 +146,42 @@
         <td> </td>
         <td> </td>
         <td> </td>
-        <td>Y3</td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-        <td> </td>
-        <td> </td>
-        <td> </td>
-        <td> </td>
-        <td> </td>
-        <td> </td>
-        <td> </td>
+        <td>
+          <key-select button="Y3" position="bottom" />
+        </td>
       </tr>
       <tr>
         <td> </td>
-        <td>B5</td>
-        <td>R2</td>
-        <td>G2</td>
         <td> </td>
-        <td>R5</td>
-        <td>R4</td>
-        <td>R3</td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>
+          <key-select button="B5" position="bottom" />
+        </td>
+        <td>
+          <key-select button="R2" position="bottom" />
+        </td>
+        <td>
+          <key-select button="G2" position="bottom" />
+        </td>
+        <td> </td>
+        <td>
+          <key-select button="R5" position="bottom" />
+        </td>
+        <td>
+          <key-select button="R4" position="bottom" />
+        </td>
+        <td>
+          <key-select button="R3" position="bottom" />
+        </td>
         <td> </td>
       </tr>
     </table>
@@ -135,7 +189,14 @@
 </template>
 
 <script setup>
-console.log('This message is being logged by "App.vue", included via Vite');
+console.log('Application started');
+</script>
+
+<script>
+export default {
+  methods: {
+  }
+}
 </script>
 
 <style>
