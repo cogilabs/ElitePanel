@@ -19,7 +19,7 @@ const createWindow = () => {
   });
 
   // Create a SerialPort instance and configure it according to your ESP32 setup
-  const port = new SerialPort({ path: 'COM4', baudRate: 9600 })
+  const port = new SerialPort({ path: 'COM4', baudRate: 115200 })
   let serialInput = "";
   let input = "";
 
@@ -27,17 +27,10 @@ const createWindow = () => {
   port.on('data', (data) => {
     // Handle received data
     const receivedData = data.toString();
-    if (receivedData != "$") {
-      serialInput = serialInput + receivedData;
-    } else {
-      console.log('Received data:', serialInput);
-      input = serialInput;
-      serialInput = "";
-    }
-    if (input == "a") {
+    console.log(receivedData);
+    /*if (receivedData == "a") {
       robot.keyTap('a');
-      input = "";
-    }
+    }*/
   });
 
   // and load the index.html of the app.
