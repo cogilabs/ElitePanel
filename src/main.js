@@ -44,7 +44,7 @@ const createWindow = () => {
   if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
     mainWindow.loadURL(MAIN_WINDOW_VITE_DEV_SERVER_URL);
   } else {
-    mainWindow.loadFile(path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`));
+    mainWindow.loadFile(path.join(__dirname, `/src/renderer/${MAIN_WINDOW_VITE_NAME}/index.html`));
   }
 
   // Open the DevTools.
@@ -78,37 +78,6 @@ const template = [
       isMac ? { role: 'close' } : { role: 'quit' }
     ]
   },
-  // { role: 'editMenu' }
-  {
-    label: 'Edit',
-    submenu: [
-      { role: 'undo' },
-      { role: 'redo' },
-      { type: 'separator' },
-      { role: 'cut' },
-      { role: 'copy' },
-      { role: 'paste' },
-      ...(isMac
-        ? [
-            { role: 'pasteAndMatchStyle' },
-            { role: 'delete' },
-            { role: 'selectAll' },
-            { type: 'separator' },
-            {
-              label: 'Speech',
-              submenu: [
-                { role: 'startSpeaking' },
-                { role: 'stopSpeaking' }
-              ]
-            }
-          ]
-        : [
-            { role: 'delete' },
-            { type: 'separator' },
-            { role: 'selectAll' }
-          ])
-    ]
-  },
   // { role: 'viewMenu' }
   {
     label: 'View',
@@ -116,12 +85,6 @@ const template = [
       { role: 'reload' },
       { role: 'forceReload' },
       { role: 'toggleDevTools' },
-      { type: 'separator' },
-      { role: 'resetZoom' },
-      { role: 'zoomIn' },
-      { role: 'zoomOut' },
-      { type: 'separator' },
-      { role: 'togglefullscreen' }
     ]
   },
   // { role: 'windowMenu' }
@@ -129,7 +92,6 @@ const template = [
     label: 'Window',
     submenu: [
       { role: 'minimize' },
-      { role: 'zoom' },
       ...(isMac
         ? [
             { type: 'separator' },
@@ -195,6 +157,7 @@ app.on('activate', () => {
 
 app.on('will-quit', () => {
   // Close the serial port when the app is quitting
+  const port = new SerialPort({ path: 'COM4', baudRate: 9600 })
   port.close((err) => {
     if (err) {
       console.error('Error closing serial port:', err);
