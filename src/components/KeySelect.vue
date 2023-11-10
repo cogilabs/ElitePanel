@@ -9,7 +9,7 @@
       ]" 
       ref="menu" @click="openClose">
         {{ button }}
-        <span class="arrow">v</span>
+        <span class="arrow">^</span>
     </button>
     <section v-bind:class="['dropdownMenu', { bottom: position == 'bottom' }, { top: position != 'bottom' }]" v-if="isOpen" >
       <section class="option">
@@ -198,15 +198,15 @@ export default {
   transition: transform 0.3s ease;
 }
 
-.bottom .arrow {
+.top .arrow {
   transform: rotate(180deg);
 }
 
-.open .arrow {
-  transform: rotate(180deg);
+.top.open .arrow {
+  transform: rotate(360deg);
 }
 
 .bottom.open .arrow {
-  transform: rotate(360deg);
+  transform: rotate(180deg);
 }
 </style>

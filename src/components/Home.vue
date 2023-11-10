@@ -4,7 +4,7 @@
   </div>
   <div class="inputTable">  <!--  Y1 LB LG LW LY LR Y4  -->
     <table>                 <!--  B1                Y5  -->
-      <tr>                  <!--  B2  Y2 B5   R3 R6 W1  -->
+      <tr class="firstTr">  <!--  B2  Y2 B5   R3 R6 W1  -->
         <td></td>           <!--  B3  R1 R2   R4 B6 G3  -->
         <td>                <!--  B4  G1 G2   R5 Y3 Y6  -->
           <key-select button="Y1" />
@@ -156,7 +156,7 @@
         <td> </td>
         <td> </td>
       </tr>
-      <tr>
+      <tr class="lastTr">
         <td> </td>
         <td>
           <key-select button="B5" position="bottom" />
@@ -236,11 +236,15 @@ table {
   height: 90%;
 }
 
-td, th {
+td {
   /*border: solid 1px black;*/
   text-align: center;
   padding: 8px;
   width: 10%;
   height: 8%;
 }
+
+/*.firstTr td, .lastTr td{
+  height: 15%;
+}*/
 </style>
