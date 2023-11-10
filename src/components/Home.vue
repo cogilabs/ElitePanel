@@ -2,35 +2,30 @@
   <div class="bgPicture">
     <img src="/images/topRender.png">
   </div>
-  <div class="inputTable">
-    <!--Y1 LB LG LW LY LR Y4
-        B1                Y5
-        B2  Y2 B5   R3 R6 W1
-        B3  R1 R2   R4 B6 G3
-        B4  G1 G2   R5 Y3 Y6-->
-    <table>
-      <tr>
-        <td></td>
-        <td>
-          <key-select button="Y1" position="top" />
+  <div class="inputTable">  <!--  Y1 LB LG LW LY LR Y4  -->
+    <table>                 <!--  B1                Y5  -->
+      <tr>                  <!--  B2  Y2 B5   R3 R6 W1  -->
+        <td></td>           <!--  B3  R1 R2   R4 B6 G3  -->
+        <td>                <!--  B4  G1 G2   R5 Y3 Y6  -->
+          <key-select button="Y1" />
         </td>
         <td>
-          <key-select button="LB" position="top" />
+          <key-select button="LB" />
         </td>
         <td>
-          <key-select button="LG" position="top" />
+          <key-select button="LG" />
         </td>
         <td>
-          <key-select button="LW" position="top" />
+          <key-select button="LW" />
         </td>
         <td>
-          <key-select button="LY" position="top" />
+          <key-select button="LY" />
         </td>
         <td>
-          <key-select button="LR" position="top" />
+          <key-select button="LR" />
         </td>
         <td>
-          <key-select button="Y4" position="top" />
+          <key-select button="Y4" />
         </td>
         <td> </td>
       </tr>
@@ -47,7 +42,7 @@
       </tr>
       <tr>
         <td>
-          <key-select button="B1" position="top" />
+          <key-select button="B1" />
         </td>
         <td> </td>
         <td> </td>
@@ -57,27 +52,12 @@
         <td> </td>
         <td> </td>
         <td>
-          <key-select button="Y5" position="top" />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <key-select button="Y2" position="top" />
-        </td>
-        <td> </td>
-        <td> </td>
-        <td> </td>
-        <td> </td>
-        <td> </td>
-        <td> </td>
-        <td> </td>
-        <td>
-          <key-select button="R6" position="top" />
+          <key-select button="Y5" />
         </td>
       </tr>
       <tr>
         <td>
-          <key-select button="B2" position="top" />
+          <key-select button="Y2" />
         </td>
         <td> </td>
         <td> </td>
@@ -87,12 +67,12 @@
         <td> </td>
         <td> </td>
         <td>
-          <key-select button="W1" position="top" />
+          <key-select button="R6" />
         </td>
       </tr>
       <tr>
         <td>
-          <key-select button="R1" position="top" />
+          <key-select button="B2" />
         </td>
         <td> </td>
         <td> </td>
@@ -102,7 +82,22 @@
         <td> </td>
         <td> </td>
         <td>
-          <key-select button="B6" position="top" />
+          <key-select button="W1" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <key-select button="R1" />
+        </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td>
+          <key-select button="B6" />
         </td>
       </tr>
       <tr>

@@ -1,7 +1,17 @@
 <template>
   <section class="dropDownMenuWrapper">
-    <button class="keySelectButton" ref="menu" @click="openClose">{{ button }}</button>
-    <section class="dropdownMenu" v-if="isOpen" >
+    <button 
+      v-bind:class="[
+        'keySelectButton', 
+        { bottom: position == 'bottom' }, 
+        { top: position != 'bottom' }, 
+        { open: isOpen }
+      ]" 
+      ref="menu" @click="openClose">
+        {{ button }}
+        <span class="arrow">v</span>
+    </button>
+    <section v-bind:class="['dropdownMenu', { bottom: position == 'bottom' }, { top: position != 'bottom' }]" v-if="isOpen" >
       <section class="option">
         <button @click="sayKey(button, 'A')">A</button>
       </section>
@@ -114,7 +124,8 @@ export default {
     }
   },
   methods: {
-    openClose() { var _this = this
+    openClose() { 
+      var _this = this
       const closeListerner = (e) => {
         if ( _this.catchOutsideClick(e, _this.$refs.menu ) )
           window.removeEventListener('click', closeListerner) , _this.isOpen = false
@@ -123,15 +134,13 @@ export default {
       this.isOpen = !this.isOpen
     },
     catchOutsideClick(event, dropdown)  {
+      // When user clicks menu — do nothing
+      if( dropdown == event.target )
+        return false
 
-    // When user clicks menu — do nothing
-    if( dropdown == event.target )
-      return false
-
-    // When user clicks outside of the menu — close the menu
-    if( this.isOpen && dropdown != event.target )
-      return true
-
+      // When user clicks outside of the menu — close the menu
+      if( this.isOpen && dropdown != event.target )
+        return true
     },
     sayKey(button, key) {
       console.log(button, key);
@@ -141,23 +150,63 @@ export default {
 </script>
 
 <style scoped>
-.dropDownMenuWrapper--noTitle {
-  padding: 0;
-  width: 60px;
-  height: 60px;
-}
-
-.dropDownMenuWrapper--dark {
-  background: #333;
-  border: none;
-}
-
 .dropdownMenu {
+  border: solid 1px darkslategrey;
+  background-color: aliceblue;
   position: absolute;
+  z-index: 2;
+  max-height: 45%;
+  overflow-y: scroll;
+}
+.dropdownMenu.bottom {
+  transform: translateY(-107.5%);
+}
+
+.dropdownMenu button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 100%;
+}
+.dropdownMenu button:hover {
+  background: #00000022;
 }
 
 .keySelectButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+  position: relative;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  display: inline-block;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.bottom .arrow {
+  transform: rotate(180deg);
+}
+
+.open .arrow {
+  transform: rotate(180deg);
+}
+
+.bottom.open .arrow {
+  transform: rotate(360deg);
 }
 </style>
