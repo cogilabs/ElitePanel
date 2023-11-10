@@ -215,6 +215,11 @@ body {
   z-index:-10;
 }
 
+img {
+  width: 100vw;
+  height: 100vh;
+}
+
 .inputTable {
   display: flex;
   flex-wrap: nowrap;
