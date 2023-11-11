@@ -180,7 +180,7 @@ export default {
   overflow-y: scroll;
 }
 .dropdownMenu.bottom {
-  transform: translateY(-107.5%);
+  transform: translateY(-106.5%);
 }
 
 .dropdownMenu button {
@@ -206,6 +206,7 @@ export default {
   font-weight: bold;
   color: white;
   background-color: #18222c;
+  box-shadow: 0px 0px 4px 1px #94a1b0;
 }
 
 .button-content {

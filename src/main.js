@@ -11,11 +11,19 @@ if (require('electron-squirrel-startup')) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1000,
-    height: 700,
+    width: 987,
+    height: 675,
+    useContentSize: true,
+    resizable: false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
+    titleBarStyle: 'hidden',
+    titleBarOverlay: {
+      color: '#2a414e',
+      symbolColor: 'aliceblue',
+      height: 20
+    }
   });
 
   // Create a SerialPort instance and configure it according to your ESP32 setup
@@ -45,86 +53,6 @@ const createWindow = () => {
 };
 
 const isMac = process.platform === 'darwin'
-
-const template = [
-  // { role: 'appMenu' }
-  ...(isMac
-    ? [{
-        label: app.name,
-        submenu: [
-          { role: 'about' },
-          { type: 'separator' },
-          { role: 'services' },
-          { type: 'separator' },
-          { role: 'hide' },
-          { role: 'hideOthers' },
-          { role: 'unhide' },
-          { type: 'separator' },
-          { role: 'quit' }
-        ]
-      }]
-    : []),
-  // { role: 'fileMenu' }
-  {
-    label: 'File',
-    submenu: [
-      isMac ? { role: 'close' } : { role: 'quit' }
-    ]
-  },
-  // { role: 'viewMenu' }
-  {
-    label: 'View',
-    submenu: [
-      { role: 'reload' },
-      { role: 'forceReload' },
-      { role: 'toggleDevTools' },
-    ]
-  },
-  // { role: 'windowMenu' }
-  {
-    label: 'Window',
-    submenu: [
-      { role: 'minimize' },
-      ...(isMac
-        ? [
-            { type: 'separator' },
-            { role: 'front' },
-            { type: 'separator' },
-            { role: 'window' }
-          ]
-        : [
-            { role: 'close' }
-          ])
-    ]
-  },
-  {
-    label: 'Cogilabs',
-    submenu: [
-      {
-        label: 'open website',
-        click: async () => {
-          const { shell } = require('electron')
-          await shell.openExternal('https://cogilabs.eu')
-        }
-      }
-    ]
-  },
-  {
-    role: 'help',
-    submenu: [
-      {
-        label: 'Learn More',
-        click: async () => {
-          const { shell } = require('electron')
-          await shell.openExternal('https://electronjs.org')
-        }
-      }
-    ]
-  }
-]
-
-const menu = Menu.buildFromTemplate(template)
-Menu.setApplicationMenu(menu)
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
