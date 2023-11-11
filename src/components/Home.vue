@@ -200,7 +200,7 @@ body {
     Arial, sans-serif;
   margin: auto;
   max-width: 38rem;
-  /*background-color: #1e1e1e;*/
+  background-color: #18222c;
 }
 
 .bgPicture {

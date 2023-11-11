@@ -150,9 +150,30 @@ export default {
 </script>
 
 <style scoped>
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: goldenrod; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darkgoldenrod; 
+}
 .dropdownMenu {
-  border: solid 1px darkslategrey;
-  background-color: aliceblue;
+  border: solid 1px black;
+  background-color: #263341;
   position: absolute;
   z-index: 2;
   max-height: 45%;
@@ -167,6 +188,7 @@ export default {
   background: none;
   cursor: pointer;
   width: 100%;
+  color: burlywood;
 }
 .dropdownMenu button:hover {
   background: #00000022;
@@ -181,6 +203,9 @@ export default {
   height: 100%;
   cursor: pointer;
   position: relative;
+  font-weight: bold;
+  color: white;
+  background-color: #18222c;
 }
 
 .button-content {
