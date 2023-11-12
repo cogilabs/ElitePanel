@@ -201,10 +201,14 @@ body {
   margin: auto;
   max-width: 38rem;
   background-color: #18222c;
+  position: fixed;
+  left: 0;
+  top: 27px;
 }
 
 .bgPicture {
   display: flex;
+  position: fixed;
   align-content: center;
   justify-content: center;
   align-items: center;
@@ -223,8 +227,8 @@ img {
   align-items: center;
   justify-content: center;
   position: fixed;
-  left:0;
-  top:0;
+  left: 0;
+  top: 27px;
   width: 100%;
   height: 100%;
   margin: auto;

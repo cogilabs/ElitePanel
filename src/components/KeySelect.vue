@@ -100,16 +100,16 @@
         <button @click="sayKey(button, 'Tab')">Tab</button>
       </section>
       <section class="option">
-        <button @click="sayKey(button, 'UP')">UP</button>
+        <button @click="sayKey(button, '↑')">↑</button>
       </section>
       <section class="option">
-        <button @click="sayKey(button, 'LEFT')">LEFT</button>
+        <button @click="sayKey(button, '←')">←</button>
       </section>
       <section class="option">
-        <button @click="sayKey(button, 'DOWN')">DOWN</button>
+        <button @click="sayKey(button, '↓')">↓</button>
       </section>
       <section class="option">
-        <button @click="sayKey(button, 'RIGHT')">RIGHT</button>
+        <button @click="sayKey(button, '→')">→</button>
       </section>
     </section>
   </section>
@@ -173,7 +173,7 @@ export default {
 }
 .dropdownMenu {
   border: solid 1px black;
-  background-color: #263341;
+  background-color: #2a414e;
   position: absolute;
   z-index: 2;
   max-height: 45%;
@@ -192,6 +192,7 @@ export default {
 }
 .dropdownMenu button:hover {
   background: #00000022;
+  color: goldenrod;
 }
 
 .keySelectButton {
@@ -205,7 +206,7 @@ export default {
   position: relative;
   font-weight: bold;
   color: white;
-  background-color: #18222c;
+  background-color: #263341;
   box-shadow: 0px 0px 4px 1px #94a1b0;
 }
 
@@ -226,6 +227,11 @@ export default {
 
 .top .arrow {
   transform: rotate(180deg);
+}
+
+.open {
+  border-style: inset;
+  box-shadow: 0px 0px 4px 1px #4c535b;
 }
 
 .top.open .arrow {
