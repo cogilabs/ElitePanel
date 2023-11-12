@@ -73,35 +73,4 @@ body {
   z-index: 10;
   font-size: small;
 }
-
-/*.menuBar button {
-  border: 0;
-  border-right: solid 1px #2a414e;
-  background-color: #00000000;
-  height: 100%;
-}
-
-.menuBar button:hover {
-  background-color: #00000020;
-}
-.menuDropdown {
-  border: solid 1px black;
-  background-color: #2a414e;
-  position: absolute;
-  z-index: 2;
-  max-height: 45%;
-  overflow-y: scroll;
-}
-
-.menuDropdown button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  width: 100%;
-  color: burlywood;
-}
-.menuDropdown button:hover {
-  background: #00000022;
-  color: goldenrod;
-}*/
 </style>

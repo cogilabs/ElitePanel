@@ -248,8 +248,4 @@ td {
   width: 10%;
   height: 8%;
 }
-
-/*.firstTr td, .lastTr td{
-  height: 15%;
-}*/
 </style>
