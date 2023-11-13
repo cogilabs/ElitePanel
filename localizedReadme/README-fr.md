@@ -12,7 +12,7 @@
     <a href="https://www.espressif.com/en/products/socs/esp32" target="_blank"><img alt="Badge ESP32" title="Utilise ESP32 !" src="https://img.shields.io/badge/ESP32-DD4A23?style=for-the-badge&logo=espressif&logoColor=white"/></a>
 </p>
 
-## ⚠️ Avertissement : Travail en Cours ⚠️
+## ⚠️ Avertissement : Développement en Cours ⚠️
 
 ## Table des Matières
 
