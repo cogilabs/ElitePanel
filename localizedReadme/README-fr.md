@@ -1,4 +1,4 @@
-# Application de Contrôle Elite Panel
+# Elite Panel Control App
 [→ In English](/README.md)
 
 <p align="center">
@@ -26,7 +26,7 @@
 
 ## Introduction
 
-L'application de Contrôle Elite Panel est un logiciel basé sur Electron conçu pour configurer l'Elite Panel, un panneau de contrôle conçu pour des jeux de simulation tels que Elite Dangerous et American Truck Simulator. Il permet aux utilisateurs de créer, modifier et enregistrer des profils pour les boutons et leviers, offrant des mappings et configurations de touches personnalisés.
+L'**Elite Panel Control App** est un logiciel basé sur Electron conçu pour configurer l'**Elite Panel**, un panneau de contrôle conçu pour des jeux de simulation tels que Elite Dangerous et American Truck Simulator. Il permet aux utilisateurs de créer, modifier et enregistrer des profils pour les boutons et leviers, offrant des mappings et configurations de touches personnalisés.
 
 ## Fonctionnalités
 
@@ -36,7 +36,7 @@ L'application de Contrôle Elite Panel est un logiciel basé sur Electron conçu
 
 ## Pour Commencer
 
-Pour utiliser l'Application de Contrôle Elite Panel, suivez ces étapes :
+Pour utiliser l'**Elite Panel Control App**, suivez ces étapes :
 
 1. **Installation :** Clonez ou téléchargez le dépôt.
 2. **Dépendances :** Assurez-vous d'avoir Node.js et npm installés.
@@ -61,7 +61,7 @@ L'application vous permet de configurer :
 
 Le matériel Elite Panel se compose d'un panneau de contrôle physique comprenant des boutons et des leviers. Voici une image du panneau :
 
-![Matériel Elite Panel](/readme_sources/images/panelPhoto.png)
+![Elite Panel](/readme_sources/images/panelPhoto.png)
 
 ## Intégration Arduino (ESP32)
 
@@ -69,5 +69,5 @@ L'Elite Panel est alimenté par un microcontrôleur ESP32. Le code Arduino pour 
 
 Il comprend :
 
- - Un code autonome, qui ne nécessite pas l'Application de Contrôle Elite Panel et est prêt à être utilisé pour ma configuration d'Elite Dangerous. Vous pouvez personnaliser directement le programme pour modifier les touches → [Ici](/esp32_code/standalone/standalone.ino)
- - [WIP] Une version programmable du code, conçue pour fonctionner avec l'Application de Contrôle Elite Panel et avoir des sorties personnalisables → [Ici](/esp32_code/pcProgrammable/pcProgrammable.ino)
+ - Un code autonome, qui ne nécessite pas l'**Elite Panel Control App** et est prêt à être utilisé pour ma configuration d'Elite Dangerous. Vous pouvez personnaliser directement le programme pour modifier les touches → [Ici](/esp32_code/standalone/standalone.ino)
+ - [WIP] Une version programmable du code, conçue pour fonctionner avec l'**Elite Panel Control App** et avoir des sorties personnalisables → [Ici](/esp32_code/pcProgrammable/pcProgrammable.ino)
