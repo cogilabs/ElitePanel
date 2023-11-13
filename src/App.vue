@@ -30,7 +30,7 @@
           { name: "Option 2" },
           { name: "Option 3" }
         ],
-        profilesItems: [
+        profilesItems: [ // TODO: Make interactive
           { name: "Profile 1" },
           { name: "Profile 2" },
           { name: "Profile 3" }
@@ -61,7 +61,7 @@ body {
   height: 32px;
   width: 100vw;
   background-color: #2a414e;
-  color: whitesmoke;
+  color: aliceblue;
   position: fixed;
   top: 0;
   left: 0;
@@ -75,7 +75,7 @@ body {
   height: 22px;
   width: 100vw;
   background-color: #3c5d70;
-  color: whitesmoke;
+  color: aliceblue;
   position: fixed;
   top: 32px;
   left: 0;

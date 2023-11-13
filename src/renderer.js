@@ -16,7 +16,7 @@ const router = createRouter({
 })
 
 const app = createApp(App)
-app.use(router) // Use the router in the app
+app.use(router)
 
 app.component('key-select', KeySelect)
 app.component('menu-item', MenuItem)

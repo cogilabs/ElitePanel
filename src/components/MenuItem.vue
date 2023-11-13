@@ -67,7 +67,7 @@ export default {
 
 .menuItemButton.open, .menuItemButton:hover {
   background: #00000022;
-  color: whitesmoke;
+  color: aliceblue;
 }
 
 .dropdownMenu {

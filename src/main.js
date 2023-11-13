@@ -27,7 +27,7 @@ const createWindow = () => {
   });
 
   // Create a SerialPort instance and configure it according to your ESP32 setup
-  const port = new SerialPort({ path: 'COM4', baudRate: 115200 })
+  const port = new SerialPort({ path: 'COM4', baudRate: 115200 }) // TODO: Interactive COM Port selection
   let serialInput = "";
   let input = "";
 
@@ -51,8 +51,6 @@ const createWindow = () => {
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
 };
-
-const isMac = process.platform === 'darwin'
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
@@ -78,12 +76,11 @@ app.on('activate', () => {
 
 app.on('will-quit', () => {
   // Close the serial port when the app is quitting
-  const port = new SerialPort({ path: 'COM4', baudRate: 9600 })
-  port.close((err) => {
+  /*port.close((err) => {
     if (err) {
       console.error('Error closing serial port:', err);
     }
-  });
+  });*/
 
   // Unregister all global shortcuts
   globalShortcut.unregisterAll();
