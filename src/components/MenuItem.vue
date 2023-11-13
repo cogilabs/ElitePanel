@@ -12,7 +12,7 @@
       <section 
       v-for="option in options"
       class="option">
-        <button @click="">{{ option.name }}</button>
+        <button @click="console.log(option.name)">{{ option.name }}</button>
       </section>
     </section>
   </div>

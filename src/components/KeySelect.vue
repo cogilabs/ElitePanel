@@ -176,7 +176,7 @@ export default {
   background-color: #2a414e;
   position: absolute;
   z-index: 2;
-  max-height: 45%;
+  max-height: 43%;
   overflow-y: scroll;
 }
 .dropdownMenu.bottom {

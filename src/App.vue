@@ -8,6 +8,10 @@
     :options="fileItems"
     />
     <menu-item 
+    button="Profiles"
+    :options="profilesItems"
+    />
+    <menu-item 
     button="Settings"
     :options="settingsItems"
     />
@@ -25,6 +29,11 @@
           { name: "Option 1" },
           { name: "Option 2" },
           { name: "Option 3" }
+        ],
+        profilesItems: [
+          { name: "Profile 1" },
+          { name: "Profile 2" },
+          { name: "Profile 3" }
         ],
         settingsItems: [
           { name: "Setting 1" },
