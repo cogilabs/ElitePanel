@@ -28,7 +28,7 @@ L'**ElitePanel** est un panneau de contrôle configurable conçu pour les jeux d
 
 ## Introduction
 
-L'**ElitePanel Control App** est un logiciel basé sur Electron conçu pour configurer l'**ElitePanel**, un panneau de contrôle conçu pour des jeux de simulation tels que Elite Dangerous et American Truck Simulator. Il permet aux utilisateurs de créer, modifier et enregistrer des profils pour les boutons et leviers, offrant des mappings et configurations de touches personnalisés.
+L'**ElitePanel Configurator** est un logiciel basé sur Electron conçu pour configurer l'**ElitePanel**, un panneau de contrôle conçu pour des jeux de simulation tels que Elite Dangerous et American Truck Simulator. Il permet aux utilisateurs de créer, modifier et enregistrer des profils pour les boutons et leviers, offrant des mappings et configurations de touches personnalisés.
 
 ## Fonctionnalités
 
@@ -38,7 +38,7 @@ L'**ElitePanel Control App** est un logiciel basé sur Electron conçu pour conf
 
 ## Pour Commencer
 
-Pour utiliser l'**ElitePanel Control App**, suivez ces étapes :
+Pour utiliser l'**ElitePanel Configurator**, suivez ces étapes :
 
 1. **Installation :** Clonez ou téléchargez le dépôt.
 2. **Dépendances :** Assurez-vous d'avoir Node.js et npm installés.
@@ -71,5 +71,5 @@ L'ElitePanel est alimenté par un microcontrôleur ESP32. Le code Arduino pour l
 
 Il comprend :
 
- - Un code autonome, qui ne nécessite pas l'**ElitePanel Control App** et est prêt à être utilisé pour ma configuration d'Elite Dangerous. Vous pouvez personnaliser directement le programme pour modifier les touches → [Ici](/esp32_code/standalone/standalone.ino)
- - [WIP] Une version programmable du code, conçue pour fonctionner avec l'**ElitePanel Control App** et avoir des sorties personnalisables → [Ici](/esp32_code/pcProgrammable/pcProgrammable.ino)
+ - Un code autonome, qui ne nécessite pas l'**ElitePanel Configurator** et est prêt à être utilisé pour ma configuration d'Elite Dangerous. Vous pouvez personnaliser directement le programme pour modifier les touches → [Ici](/esp32_code/standalone/standalone.ino)
+ - [WIP] Une version programmable du code, conçue pour fonctionner avec l'**ElitePanel Configurator** et avoir des sorties personnalisables → [Ici](/esp32_code/pcProgrammable/pcProgrammable.ino)

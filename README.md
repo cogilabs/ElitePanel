@@ -28,7 +28,7 @@ The **Cogilabs ElitePanel** is a configurable control panel designed for simulat
 
 ## Introduction
 
-The **ElitePanel Control App** is an Electron-based software made to configure the **ElitePanel**, a control panel designed for simulation games such as Elite Dangerous and American Truck Simulator. It allows users to create, modify, and save profiles for buttons and levers, providing custom key mappings and configurations.
+The **Cogilabs ElitePanel Configurator** is an Electron-based software made to configure the **ElitePanel**, a control panel designed for simulation games such as Elite Dangerous and American Truck Simulator. It allows users to create, modify, and save profiles for buttons and levers, providing custom key mappings and configurations.
 
 ## Features
 
@@ -38,7 +38,7 @@ The **ElitePanel Control App** is an Electron-based software made to configure t
 
 ## Getting Started
 
-To use the **ElitePanel Control App**, follow these steps:
+To use the **Cogilabs ElitePanel Configurator**, follow these steps:
 
 1. **Installation:** Clone or download the repository.
 2. **Dependencies:** Ensure you have Node.js and npm installed.
@@ -70,5 +70,5 @@ The ElitePanel hardware consists of a physical control panel featuring buttons a
 The ElitePanel is powered by an ESP32 microcontroller. The Arduino code for the ESP32 integration is available in the `esp32_code` directory in this repository.  
 
 It features:
- - A standalone code, that doesn't use the **ElitePanel Control App** and is ready to go for my config of Elite Dangerous. You can directly customize the program to modify keys → [Here](/esp32_code/standalone/standalone.ino)
- - [WIP] A programmable version of the code, built to work with the **ElitePanel Control App** and to have customisable outputs → [Here](/esp32_code/pcProgrammable/pcProgrammable.ino)
+ - A standalone code, that doesn't use the **Cogilabs ElitePanel Configurator** and is ready to go for my config of Elite Dangerous. You can directly customize the program to modify keys → [Here](/esp32_code/standalone/standalone.ino)
+ - [WIP] A programmable version of the code, built to work with the **Cogilabs ElitePanel Configurator** and to have customisable outputs → [Here](/esp32_code/pcProgrammable/pcProgrammable.ino)
