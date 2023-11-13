@@ -1,4 +1,4 @@
-# Elite Panel Control App
+# ElitePanel
 [→ In English](/README.md)
 
 <p align="center">
@@ -14,6 +14,8 @@
 
 ## ⚠️ Avertissement : Développement en Cours ⚠️
 
+L'**ElitePanel** est un panneau de contrôle configurable conçu pour les jeux de simulation.
+
 ## Table des Matières
 
 - [Introduction](#introduction)
@@ -26,7 +28,7 @@
 
 ## Introduction
 
-L'**Elite Panel Control App** est un logiciel basé sur Electron conçu pour configurer l'**Elite Panel**, un panneau de contrôle conçu pour des jeux de simulation tels que Elite Dangerous et American Truck Simulator. Il permet aux utilisateurs de créer, modifier et enregistrer des profils pour les boutons et leviers, offrant des mappings et configurations de touches personnalisés.
+L'**ElitePanel Control App** est un logiciel basé sur Electron conçu pour configurer l'**ElitePanel**, un panneau de contrôle conçu pour des jeux de simulation tels que Elite Dangerous et American Truck Simulator. Il permet aux utilisateurs de créer, modifier et enregistrer des profils pour les boutons et leviers, offrant des mappings et configurations de touches personnalisés.
 
 ## Fonctionnalités
 
@@ -36,7 +38,7 @@ L'**Elite Panel Control App** est un logiciel basé sur Electron conçu pour con
 
 ## Pour Commencer
 
-Pour utiliser l'**Elite Panel Control App**, suivez ces étapes :
+Pour utiliser l'**ElitePanel Control App**, suivez ces étapes :
 
 1. **Installation :** Clonez ou téléchargez le dépôt.
 2. **Dépendances :** Assurez-vous d'avoir Node.js et npm installés.
@@ -59,15 +61,15 @@ L'application vous permet de configurer :
 
 ## Configuration Matérielle
 
-Le matériel Elite Panel se compose d'un panneau de contrôle physique comprenant des boutons et des leviers. Voici une image du panneau :
+Le matériel ElitePanel se compose d'un panneau de contrôle physique comprenant des boutons et des leviers. Voici une image du panneau :
 
-![Elite Panel](/readme_sources/images/panelPhoto.png)
+![ElitePanel](/readme_sources/images/panelPhoto.png)
 
 ## Intégration Arduino (ESP32)
 
-L'Elite Panel est alimenté par un microcontrôleur ESP32. Le code Arduino pour l'intégration ESP32 est disponible dans le répertoire `esp32_code` de ce dépôt.
+L'ElitePanel est alimenté par un microcontrôleur ESP32. Le code Arduino pour l'intégration ESP32 est disponible dans le répertoire `esp32_code` de ce dépôt.
 
 Il comprend :
 
- - Un code autonome, qui ne nécessite pas l'**Elite Panel Control App** et est prêt à être utilisé pour ma configuration d'Elite Dangerous. Vous pouvez personnaliser directement le programme pour modifier les touches → [Ici](/esp32_code/standalone/standalone.ino)
- - [WIP] Une version programmable du code, conçue pour fonctionner avec l'**Elite Panel Control App** et avoir des sorties personnalisables → [Ici](/esp32_code/pcProgrammable/pcProgrammable.ino)
+ - Un code autonome, qui ne nécessite pas l'**ElitePanel Control App** et est prêt à être utilisé pour ma configuration d'Elite Dangerous. Vous pouvez personnaliser directement le programme pour modifier les touches → [Ici](/esp32_code/standalone/standalone.ino)
+ - [WIP] Une version programmable du code, conçue pour fonctionner avec l'**ElitePanel Control App** et avoir des sorties personnalisables → [Ici](/esp32_code/pcProgrammable/pcProgrammable.ino)
