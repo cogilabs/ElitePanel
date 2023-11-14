@@ -1,7 +1,9 @@
 const { app, BrowserWindow, Menu, MenuItem, globalShortcut } = require('electron');
+//const { app, BrowserWindow, Menu, MenuItem, globalShortcut, Tray } = require('electron');
 const robot = require('robotjs');
 const path = require('path');
 const { SerialPort } = require('serialport')
+//const appIcon = new Tray('/icons/Large icon.ico')
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
