@@ -70,7 +70,7 @@ export default {
           if (menuItem.name == "Profiles") {
             console.log(typeof(menuItem.options))
             menuItem.options.push({ name: "---" });
-            for (let i = 1; i <= 3; i++) {
+            for (let i = 1; i <= 20; i++) {
               menuItem.options.push({ name: "Profile " + i });
             }
           }
@@ -102,6 +102,27 @@ export default {
 body {
   user-select: none;
   -webkit-user-select: none;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: goldenrod; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darkgoldenrod; 
 }
 </style>
 

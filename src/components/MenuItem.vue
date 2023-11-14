@@ -84,6 +84,8 @@ export default {
   width: 200px;
   margin: 5px 3px;
   border-radius: 5px;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .option {
