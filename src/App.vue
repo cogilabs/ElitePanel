@@ -31,14 +31,17 @@ export default {
           options: [
             { name: "Option 1" },
             { name: "Option 2" },
-            { name: "Option 3" },
+            { name: "---" },
+            { name: "Exit" },
           ],
           close: false,
         },
         {
           name: "Profiles",
           options: [
-            { name: "Create profile" },
+            { name: "New empty profile" },
+            { name: "Save profile" },
+            { name: "Delete current profile" },
           ],
           close: false,
         },
