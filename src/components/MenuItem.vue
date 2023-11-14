@@ -5,13 +5,14 @@
         'menuItemButton', 
         { open: isOpen }
       ]" 
-      ref="menu" @click="openClose">
+      ref="menu" @click="toggleMenu" @mouseover="openOnHover">
         {{ button }}
     </button>
     <section class="dropdownMenu" v-if="isOpen" >
       <section 
-      v-for="option in options"
-      class="option">
+        v-for="option in options"
+        class="option"
+      >
         <button @click="console.log(option.name)">{{ option.name }}</button>
       </section>
     </section>
@@ -20,33 +21,31 @@
 
 <script>
 export default {
-  props: [ "button", "options" ], // Menu title from the parent
+  props: [ "button", "options", "dropped", "close" ],
   data() {
     return {
-      isOpen: false // Variable if the menu is open or closed
+      isOpen: false
+    }
+  },
+  watch: {
+    dropped(newDropped) {
+      if (!newDropped) {
+        this.isOpen = false;
+      }
+    },
+    close() {
+      this.isOpen = false;
     }
   },
   methods: {
-    openClose() { 
-      var _this = this
-      const closeListerner = (e) => {
-        if ( _this.catchOutsideClick(e, _this.$refs.menu ) )
-          window.removeEventListener('click', closeListerner) , _this.isOpen = false
+    toggleMenu() {
+      this.isOpen = !this.isOpen;
+    },
+    openOnHover() {
+      if (this.dropped) {
+        this.$emit('hovered', this.button);
+        this.isOpen = true;
       }
-      window.addEventListener('click', closeListerner)
-      this.isOpen = !this.isOpen
-    },
-    catchOutsideClick(event, dropdown)  {
-      // When user clicks menu — do nothing
-      if( dropdown == event.target )
-        return false
-
-      // When user clicks outside of the menu — close the menu
-      if( this.isOpen && dropdown != event.target )
-        return true
-    },
-    sayKey(button, key) {
-      console.log(button, key);
     }
   }
 }

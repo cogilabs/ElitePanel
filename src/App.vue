@@ -2,19 +2,31 @@
   <div class="topBar">
     Cogilabs Elite Panel Configurator
   </div>
-  <div class="menuBar">
-    <menu-item 
-    button="File"
-    :options="fileItems"
-    />
-    <menu-item 
-    button="Profiles"
-    :options="profilesItems"
-    />
-    <menu-item 
-    button="Settings"
-    :options="settingsItems"
-    />
+  <div class="menuBar"> <!-- TODO: Create separators -->
+    <section ref="items" class="menuBarItems" @click="toggleDrop">
+      <menu-item 
+      button="File"
+      :options="fileItems"
+      :dropped="dropped"
+      :close="closeFile"
+      @hovered="receiveEmit"
+      />
+      <menu-item 
+      button="Profiles"
+      :options="profilesItems"
+      :dropped="dropped"
+      :close="closeProfiles"
+      @hovered="receiveEmit"
+      />
+      <menu-item 
+      button="Settings"
+      :options="settingsItems"
+      :dropped="dropped"
+      :close="closeSettings"
+      @hovered="receiveEmit"
+      />
+      <!--<button>Dropped: {{ dropped }}</button>--> <!-- Debug -->
+    </section>
   </div>
   <div>
     <router-view></router-view>
@@ -25,21 +37,59 @@
   export default {
     data() {
       return {
+        dropped: false,
         fileItems: [
           { name: "Option 1" },
           { name: "Option 2" },
           { name: "Option 3" }
         ],
+        closeFile: false,
         profilesItems: [ // TODO: Make interactive
           { name: "Profile 1" },
           { name: "Profile 2" },
           { name: "Profile 3" }
         ],
+        closeProfiles: false,
         settingsItems: [
           { name: "Setting 1" },
           { name: "Setting 2" },
           { name: "Setting 3" }
-        ]
+        ],
+        closeSettings: false
+      }
+    },
+    methods: {
+      receiveEmit(item) {
+        if (item == "File") {
+          this.closeProfiles = !this.closeProfiles
+          this.closeSettings = !this.closeSettings
+        }
+        if (item == "Profiles") {
+          this.closeFile = !this.closeFile
+          this.closeSettings = !this.closeSettings
+        }
+        if (item == "Settings") {
+          this.closeFile = !this.closeFile
+          this.closeProfiles = !this.closeProfiles
+        }
+      }, 
+      toggleDrop() {
+        var _this = this
+        const closeListerner = (e) => {
+          if ( _this.catchOutsideClick(e, _this.$refs.items ) )
+            window.removeEventListener('click', closeListerner) , _this.dropped = false
+        }
+        window.addEventListener('click', closeListerner)
+        this.dropped = !this.dropped
+      },
+      catchOutsideClick(event, items)  {
+        // When user clicks menu — do nothing
+        if( items.contains(event.target) )
+          return false
+
+        // When user clicks outside of the menu — close the menu
+        if( this.dropped && !items.contains(event.target) )
+          return true
       }
     }
   }
@@ -81,5 +131,9 @@ body {
   left: 0;
   z-index: 10;
   font-size: small;
+}
+
+.menuBarItems {
+  display: contents;
 }
 </style>
