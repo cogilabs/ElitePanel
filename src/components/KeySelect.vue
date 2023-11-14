@@ -178,6 +178,7 @@ export default {
   z-index: 2;
   max-height: 43%;
   overflow-y: scroll;
+  border-radius: 5px;
 }
 .dropdownMenu.bottom {
   transform: translateY(-106.5%);
@@ -208,6 +209,7 @@ export default {
   color: white;
   background-color: #263341;
   box-shadow: 0px 0px 4px 1px #94a1b0;
+  border-radius: 5px;
 }
 
 .button-content {

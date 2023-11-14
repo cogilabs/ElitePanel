@@ -82,6 +82,8 @@ export default {
   background-color: #2a414e;
   z-index: 2;
   width: 200px;
+  margin: 5px 3px;
+  border-radius: 5px;
 }
 
 .option {
