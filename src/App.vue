@@ -41,6 +41,7 @@ export default {
           options: [
             { name: "New empty profile" },
             { name: "Save profile" },
+            { name: "Save profile as…" },
             { name: "Delete current profile" },
           ],
           close: false,
