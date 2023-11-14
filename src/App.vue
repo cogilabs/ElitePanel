@@ -2,7 +2,7 @@
   <div class="topBar">
     Cogilabs Elite Panel Configurator
   </div>
-  <div class="menuBar"> <!-- TODO: Create separators -->
+  <div class="menuBar">
     <section ref="items" class="menuBarItems" @click="toggleDrop">
       <menu-item 
       button="File"
@@ -25,7 +25,6 @@
       :close="closeSettings"
       @hovered="receiveEmit"
       />
-      <!--<button>Dropped: {{ dropped }}</button>--> <!-- Debug -->
     </section>
   </div>
   <div>
@@ -45,6 +44,8 @@
         ],
         closeFile: false,
         profilesItems: [ // TODO: Make interactive
+          { name: "Create profile" },
+          { name: "---" },
           { name: "Profile 1" },
           { name: "Profile 2" },
           { name: "Profile 3" }

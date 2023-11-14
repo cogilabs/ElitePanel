@@ -7,13 +7,13 @@
       ]" 
       ref="menu" @click="toggleMenu" @mouseover="openOnHover">
         {{ button }}
-    </button>
+    </button>  <!-- "['dropdownMenu', { bottom: position == 'bottom' } -->
     <section class="dropdownMenu" v-if="isOpen" >
       <section 
-        v-for="option in options"
-        class="option"
+        v-for="option in options"     
+        v-bind:class="['option', { separator: option.name =='---'}]"
       >
-        <button @click="console.log(option.name)">{{ option.name }}</button>
+        <button @click="optionAction(option)">{{ option.name }}</button>
       </section>
     </section>
   </div>
@@ -45,6 +45,11 @@ export default {
       if (this.dropped) {
         this.$emit('hovered', this.button);
         this.isOpen = true;
+      }
+    },
+    optionAction(option) {
+      if (option.name != "---") {
+        console.log(option.name)
       }
     }
   }
@@ -82,7 +87,6 @@ export default {
 .option {
   width: 100%;
 }
-
 .dropdownMenu button {
   border: none;
   background: none;
@@ -100,5 +104,16 @@ export default {
 .button-content {
   display: flex;
   align-items: center;
+}
+
+.separator button, .separator button:hover {
+  border-bottom: solid 1px burlywood;
+  color: #00000000;
+  background: #00000000;
+  height: 0;
+  padding: 4px;
+  cursor: unset;
+  margin: 0 15px;
+  width: -webkit-fill-available;
 }
 </style>
