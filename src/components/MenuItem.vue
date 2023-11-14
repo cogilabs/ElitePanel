@@ -6,8 +6,8 @@
         { open: isOpen }
       ]" 
       ref="menu" @click="toggleMenu" @mouseover="openOnHover">
-        {{ button }}
-    </button>  <!-- "['dropdownMenu', { bottom: position == 'bottom' } -->
+        {{ name }}
+    </button>
     <section class="dropdownMenu" v-if="isOpen" >
       <section 
         v-for="option in options"     
@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  props: [ "button", "options", "dropped", "close" ],
+  props: [ "name", "options", "dropped", "close" ],
   data() {
     return {
       isOpen: false
@@ -43,7 +43,7 @@ export default {
     },
     openOnHover() {
       if (this.dropped) {
-        this.$emit('hovered', this.button);
+        this.$emit('hovered', this.name);
         this.isOpen = true;
       }
     },
