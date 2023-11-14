@@ -126,11 +126,11 @@ export default {
   methods: {
     openClose() { 
       var _this = this
-      const closeListerner = (e) => {
+      const closeListener = (e) => {
         if ( _this.catchOutsideClick(e, _this.$refs.menu ) )
-          window.removeEventListener('click', closeListerner) , _this.isOpen = false
+          window.removeEventListener('click', closeListener) , _this.isOpen = false
       }
-      window.addEventListener('click', closeListerner)
+      window.addEventListener('click', closeListener)
       this.isOpen = !this.isOpen
     },
     catchOutsideClick(event, dropdown)  {
