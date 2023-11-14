@@ -2,7 +2,7 @@
   "name": "elite-panel",
   "productName": "elite-panel",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "A configurable control panel designed for simulation games.",
   "main": ".vite/build/main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -16,7 +16,7 @@
     "name": "0Davgi0",
     "email": "contact@davidgirou.fr"
   },
-  "license": "MIT",
+  "license": "BSD2",
   "devDependencies": {
     "@electron-forge/cli": "^6.4.2",
     "@electron-forge/maker-deb": "^6.4.2",
