@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, MenuItem, globalShortcut } = require('electron');
+const { app, BrowserWindow, Menu, MenuItem, globalShortcut, Tray, nativeImage } = require('electron');
 //const { app, BrowserWindow, Menu, MenuItem, globalShortcut, Tray } = require('electron');
 const robot = require('robotjs');
 const path = require('path');
@@ -10,6 +10,29 @@ if (require('electron-squirrel-startup')) {
   app.quit();
 }
 
+app.setUserTasks([])
+
+let tray
+
+app.whenReady().then(() => {
+  const icon = nativeImage.createFromPath('/icons/Small icon.ico')
+  tray = new Tray(icon)
+
+  // note: your contextMenu, Tooltip and Title code will go here!
+  
+  const contextMenu = Menu.buildFromTemplate([
+    { label: 'Item1', type: 'radio' },
+    { label: 'Item2', type: 'radio' },
+    { label: 'Item3', type: 'radio', checked: true },
+    { label: 'Item4', type: 'radio' }
+  ])
+
+  tray.setContextMenu(contextMenu)
+  tray.setToolTip('This is my application')
+  tray.setTitle('This is my title')
+
+})
+
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -17,6 +40,7 @@ const createWindow = () => {
     height: 675,
     useContentSize: true,
     resizable: false,
+    icon: '/icons/icon.ico.ico',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
@@ -46,8 +70,9 @@ const createWindow = () => {
   // and load the index.html of the app.
   if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
     mainWindow.loadURL(MAIN_WINDOW_VITE_DEV_SERVER_URL);
+    mainWindow.webContents.openDevTools();
   } else {
-    mainWindow.loadFile(path.join(__dirname, `/src/renderer/${MAIN_WINDOW_VITE_NAME}/index.html`));
+    mainWindow.loadFile(path.join(__dirname, `/../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`));
   }
 
   // Open the DevTools.

@@ -72,7 +72,6 @@ export default {
       loadProfiles() {
         this.menuItems.forEach((menuItem) => {
           if (menuItem.name == "Profiles") {
-            console.log(typeof(menuItem.options))
             menuItem.options.push({ name: "---" });
             for (let i = 1; i <= 20; i++) {
               menuItem.options.push({ name: "Profile " + i });
