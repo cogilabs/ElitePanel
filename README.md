@@ -30,6 +30,8 @@ The **Cogilabs ElitePanel** is a configurable control panel designed for simulat
 
 The **Cogilabs ElitePanel Configurator** is an Electron-based software made to configure the **ElitePanel**, a control panel designed for simulation games such as Elite Dangerous and American Truck Simulator. It allows users to create, modify, and save profiles for buttons and levers, providing custom key mappings and configurations.
 
+![The main screen](/readme_sources/images/appMainScreen.png)
+
 ## Features
 
 - **Custom Key Mapping:** Define and customize keystrokes for buttons and levers.

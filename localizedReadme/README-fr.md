@@ -30,6 +30,8 @@ L'**ElitePanel** est un panneau de contrôle configurable conçu pour les jeux d
 
 L'**ElitePanel Configurator** est un logiciel basé sur Electron conçu pour configurer l'**ElitePanel**, un panneau de contrôle conçu pour des jeux de simulation tels que Elite Dangerous et American Truck Simulator. Il permet aux utilisateurs de créer, modifier et enregistrer des profils pour les boutons et leviers, offrant des mappings et configurations de touches personnalisés.
 
+![L'écran principal](/readme_sources/images/appMainScreen.png)
+
 ## Fonctionnalités
 
 - **Mapping de Touches Personnalisé :** Définissez et personnalisez les touches pour les boutons et leviers.
